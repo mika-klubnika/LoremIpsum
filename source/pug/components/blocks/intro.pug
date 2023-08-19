@@ -1,3 +1,22 @@
 mixin intro()
-  .intro
+  -
+    const introList = [
+      "Totam rem aperiam eaque ipsa",
+      "Sit voluptatem accusantium doloremque laudantium",
+      "Sed ut perspiciatis, unde omnis iste natus error",
+    ]
 
+  section.intro
+    .intro__bg
+      +picture("content", "intro-bg", "jpg", 1920, 850, "фон")
+    .container
+      .intro__wrap
+        h1.title.title--h1 <span>Lorem ipsum</span> dolor sit ametconsectetur <span>adipiscing</span>
+        .intro__list
+          p.intro__strong At vero eos et accusamus et iusto odio dignissimos ducimus!
+          ul
+            each item in introList
+              li!= item
+        .intro__buttons
+          +btn({href: "#place-an-order", text: "заказать"}).btn--blue
+          +btn({href: "#", text: "подробнее"}).btn--white
