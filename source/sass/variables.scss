@@ -14,8 +14,10 @@ $color-silver:                      #C3C3C3;
 $color-summer-sky:                  #42A9ED;
 $color-summer-sky-2:                #43ABF0;
 $color-summer-sky-3:                #3E9CDC;
+$color-jaguar:                      #272733;
 $color-blue-zodiac:                 #3D4050;
 $color-black-russian:               #2A2B30;
+$color-black-russian-2:             #10101d;
 $color-black-russian-09:            rgba(16, 16, 29, 0.90);
 
 // Gradient
@@ -25,7 +27,8 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 // Typography
 // ---------------------------------
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-logo:                          "Raleway", "Arial", sans-serif;
+$ff-default:                       "lato", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
