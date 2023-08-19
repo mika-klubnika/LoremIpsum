@@ -1,0 +1,48 @@
+mixin order()
+  -
+    const descriptionList = [
+      {
+        icon: "magnifier",
+        text: "Lorem ipsum dolorsit amet",
+      },
+      {
+        icon: "percent",
+        text: "Сonsecteturadipiscing elit",
+      },
+      {
+        icon: "notepad",
+        text: "Sed do eiusmod tempor",
+      },
+      {
+        icon: "letter",
+        text: "Esse cillum doloreeu fugiat",
+      },
+      {
+        icon: "money",
+        text: "Excepteur sint occaecat cupidatat non proident",
+      },
+    ]
+
+  section.order(id="order")
+    .container
+      .order__text
+        h2.title.title--h2 Оформление <span>Заказа</span>
+        p Перед заполнением формы ознакомьтесь с нашей схемой работы!
+      ul.order__description.description
+        each item in descriptionList
+          li.description__item
+            .description__icon
+              +icon(item.icon, 55, 55)
+            p!= item.text
+      form(action="", method="post")
+        select(name="select")
+          option(selected, value="1") Выберите тип системы
+          option(value="2") 2
+        label
+          input(type="email", name="email", placeholder="Ваш e-mail")
+        label
+          input(type="text", name="name", placeholder="Ваше имя")
+
+        label(for="file") Прикрепить файл
+        input(type="file", name="file").visually-hidden
+        button(type="submit").btn.btn--blue Отправить

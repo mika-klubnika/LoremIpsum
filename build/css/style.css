@@ -444,6 +444,7 @@ html {
   font-style: normal;
   font-family: "lato", "Arial", sans-serif;
   color: #ffffff;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -830,14 +831,21 @@ button,
 
 .title {
   margin: 0;
+  text-transform: uppercase;
 }
 
 .title--h1 {
   font-size: 48px;
   font-weight: 700;
   line-height: normal;
-  text-transform: uppercase;
   color: #000000;
+}
+
+.title--h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: normal;
 }
 
 .title span {
@@ -916,6 +924,113 @@ button,
 
 .intro .btn:last-child {
   margin-right: 0;
+}
+
+.order {
+  padding-top: 120px;
+  padding-bottom: 150px;
+  background-image: url("../img/content/place-an-order-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.order__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.order__text h2 {
+  margin-bottom: 30px;
+}
+
+.order__text p {
+  margin: 0;
+  color: #BBB;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.order form .btn {
+  width: 370px;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.description__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 10px;
+  width: 209px;
+}
+
+.description__item p {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.description__item:last-child .description__icon::after {
+  display: none;
+}
+
+.description__icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/svg/ellipse.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+.description__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -125px;
+  width: 110px;
+  height: 6px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("../img/svg/dots.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*
