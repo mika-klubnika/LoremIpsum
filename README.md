@@ -1,3 +1,4 @@
+<a href="https://mika-klubnika.github.io/LoremIpsum/">Ссылка для просмотра на github pages</a>
 
 ## О проекте
 - адаптивная верстка, минимальное разрешение 320px
