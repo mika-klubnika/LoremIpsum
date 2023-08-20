@@ -4,7 +4,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(3, auto);
     gap: 75px;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,7 @@
     }
 
     @include vp-1023 {
-      grid-template-columns: repeat(2, max-content);
+      grid-template-columns: repeat(2, auto);
     }
 
     @include vp-767 {
