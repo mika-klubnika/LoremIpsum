@@ -2,6 +2,8 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper";
+@import "vendor/nouislider";
 
 // Global
 // ---------------------------------
@@ -22,6 +24,9 @@
 @import "blocks/btn";
 @import "blocks/title";
 @import "blocks/intro";
+@import "blocks/order";
+@import "blocks/description";
+@import "blocks/form";
 
 // ---------------------------------
 

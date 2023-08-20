@@ -18,6 +18,7 @@ html {
   font-family: $ff-default;
   color: $color-default-white;
 
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки

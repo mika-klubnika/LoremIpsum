@@ -1,11 +1,11 @@
 .title {
   margin: 0;
+  text-transform: uppercase;
 
   &--h1 {
     font-size: 48px;
     font-weight: 700;
     line-height: normal;
-    text-transform: uppercase;
     color: $color-default-black;
 
     @include vp-1023 {
@@ -14,6 +14,21 @@
 
     @include vp-767 {
       font-size: 25px;
+    }
+  }
+
+  &--h2 {
+    color: $color-default-white;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: normal;
+
+    @include vp-1023 {
+      font-size: 32px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
     }
   }
 
