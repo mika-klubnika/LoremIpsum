@@ -28,21 +28,37 @@ mixin order()
       .order__text
         h2.title.title--h2 Оформление <span>Заказа</span>
         p Перед заполнением формы ознакомьтесь с нашей схемой работы!
-      ul.order__description.description
-        each item in descriptionList
-          li.description__item
-            .description__icon
-              +icon(item.icon, 55, 55)
-            p!= item.text
-      form(action="", method="post")
+      .order__description.description
+        ul.description__list
+          each item in descriptionList
+            li.description__item
+              .description__icon
+                +icon(item.icon, 55, 55)
+              p!= item.text
+      form(action="", method="post").form
+        //- .form__wrapper
         select(name="select")
-          option(selected, value="1") Выберите тип системы
-          option(value="2") 2
-        label
-          input(type="email", name="email", placeholder="Ваш e-mail")
-        label
-          input(type="text", name="name", placeholder="Ваше имя")
-
-        label(for="file") Прикрепить файл
-        input(type="file", name="file").visually-hidden
+          option(selected, value="Выберите тип системы") Выберите тип системы
+          option(value="Sed ut perspiciatis") Sed ut perspiciatis
+          option(value="Nemo enim ipsam") Nemo enim ipsam
+          option(value="Et harum quidem") Et harum quidem
+          option(value="Temporibus autem") Temporibus autem
+          option(value="Itaque earum rerum") Itaque earum rerum
+        p
+          label(for="your-email").visually-hidden Ваш e-mail
+          input(type="email", name="email", id="your-email", placeholder="Ваш e-mail")
+        p
+          label(for="your-name").visually-hidden Ваше имя
+          input(type="text", name="name", id="your-name", placeholder="Ваше имя")
+        //- .form__wrapper
+        p.form__range
+          label(for="range")
+            span Sed ut perspiciatis, unde omnis iste natus
+            span.form__range-value 75%
+          input(type="range", name="range", id="range", min="0", max="100", value="75", step="5")
+        p.form__file
+          label(for="upload-file")
+            +icon("file", 18, 20)
+            span Прикрепить файл
+          input(type="file", name="file", id="upload-file").visually-hidden
         button(type="submit").btn.btn--blue Отправить

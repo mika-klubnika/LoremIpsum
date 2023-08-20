@@ -106,61 +106,79 @@
               <h2 class="title title--h2">Оформление <span>Заказа</span></h2>
               <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
             </div>
-            <ul class="order__description description">
-              <li class="description__item">
-                <div class="description__icon">
-                  <svg width="55" height="55" aria-hidden="true">
-                    <use xlink:href="#magnifier"></use>
-                  </svg>
-                </div>
-                <p>Lorem ipsum dolorsit amet</p>
-              </li>
-              <li class="description__item">
-                <div class="description__icon">
-                  <svg width="55" height="55" aria-hidden="true">
-                    <use xlink:href="#percent"></use>
-                  </svg>
-                </div>
-                <p>Сonsecteturadipiscing elit</p>
-              </li>
-              <li class="description__item">
-                <div class="description__icon">
-                  <svg width="55" height="55" aria-hidden="true">
-                    <use xlink:href="#notepad"></use>
-                  </svg>
-                </div>
-                <p>Sed do eiusmod tempor</p>
-              </li>
-              <li class="description__item">
-                <div class="description__icon">
-                  <svg width="55" height="55" aria-hidden="true">
-                    <use xlink:href="#letter"></use>
-                  </svg>
-                </div>
-                <p>Esse cillum doloreeu fugiat</p>
-              </li>
-              <li class="description__item">
-                <div class="description__icon">
-                  <svg width="55" height="55" aria-hidden="true">
-                    <use xlink:href="#money"></use>
-                  </svg>
-                </div>
-                <p>Excepteur sint occaecat cupidatat non proident</p>
-              </li>
-            </ul>
-            <form action="" method="post">
+            <div class="order__description description">
+              <ul class="description__list">
+                <li class="description__item">
+                  <div class="description__icon">
+                    <svg width="55" height="55" aria-hidden="true">
+                      <use xlink:href="#magnifier"></use>
+                    </svg>
+                  </div>
+                  <p>Lorem ipsum dolorsit amet</p>
+                </li>
+                <li class="description__item">
+                  <div class="description__icon">
+                    <svg width="55" height="55" aria-hidden="true">
+                      <use xlink:href="#percent"></use>
+                    </svg>
+                  </div>
+                  <p>Сonsecteturadipiscing elit</p>
+                </li>
+                <li class="description__item">
+                  <div class="description__icon">
+                    <svg width="55" height="55" aria-hidden="true">
+                      <use xlink:href="#notepad"></use>
+                    </svg>
+                  </div>
+                  <p>Sed do eiusmod tempor</p>
+                </li>
+                <li class="description__item">
+                  <div class="description__icon">
+                    <svg width="55" height="55" aria-hidden="true">
+                      <use xlink:href="#letter"></use>
+                    </svg>
+                  </div>
+                  <p>Esse cillum doloreeu fugiat</p>
+                </li>
+                <li class="description__item">
+                  <div class="description__icon">
+                    <svg width="55" height="55" aria-hidden="true">
+                      <use xlink:href="#money"></use>
+                    </svg>
+                  </div>
+                  <p>Excepteur sint occaecat cupidatat non proident</p>
+                </li>
+              </ul>
+            </div>
+            <form class="form" action="" method="post">
               <select name="select">
-                <option selected value="1">Выберите тип системы</option>
-                <option value="2">2</option>
+                <option selected value="Выберите тип системы">Выберите тип системы</option>
+                <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+                <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+                <option value="Et harum quidem">Et harum quidem</option>
+                <option value="Temporibus autem">Temporibus autem</option>
+                <option value="Itaque earum rerum">Itaque earum rerum</option>
               </select>
-              <label>
-                <input type="email" name="email" placeholder="Ваш e-mail">
-              </label>
-              <label>
-                <input type="text" name="name" placeholder="Ваше имя">
-              </label>
-              <label for="file">Прикрепить файл</label>
-              <input class="visually-hidden" type="file" name="file">
+              <p>
+                <label class="visually-hidden" for="your-email">Ваш e-mail</label>
+                <input type="email" name="email" id="your-email" placeholder="Ваш e-mail">
+              </p>
+              <p>
+                <label class="visually-hidden" for="your-name">Ваше имя</label>
+                <input type="text" name="name" id="your-name" placeholder="Ваше имя">
+              </p>
+              <p class="form__range">
+                <label for="range"><span>Sed ut perspiciatis, unde omnis iste natus</span><span class="form__range-value">75%</span></label>
+                <input type="range" name="range" id="range" min="0" max="100" value="75" step="5">
+              </p>
+              <p class="form__file">
+                <label for="upload-file">
+                  <svg width="18" height="20" aria-hidden="true">
+                    <use xlink:href="#file"></use>
+                  </svg><span>Прикрепить файл</span>
+                </label>
+                <input class="visually-hidden" type="file" name="file" id="upload-file">
+              </p>
               <button class="btn btn--blue" type="submit">Отправить</button>
             </form>
           </div>
