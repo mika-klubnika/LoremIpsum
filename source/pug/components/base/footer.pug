@@ -1,3 +1,46 @@
 mixin footer(footerMods)
+  -
+    const payment = [
+      {
+        icon: "qiwi-wallet",
+        title: "Qiwi wallet",
+      },
+      {
+        icon: "yandex-money",
+        title: "Yandex Money",
+      },
+      {
+        icon: "web-money",
+        title: "Web Money",
+      },
+    ]
+
+  -
+    const contacts = [
+      {
+        icon: "email",
+        href: "mailto:info@ipsum228.com",
+        text: "info@ipsum228.com",
+      },
+      {
+        icon: "vk",
+        href: "#",
+        text: "Мы вконтакте",
+      },
+    ]
+
   footer.footer(class=footerMods)
     .container
+      p.footer__copyright © 2018 <span>«LoremIpsum.net»</span> Все права защищены.
+      ul.footer__payment
+        each item in payment
+          li
+            +icon(item.icon, 20, 20)
+            span!= item.title
+      ul.footer__contacts
+        each item in contacts
+          li
+            a(href=item.href)
+              +icon(item.icon, 20, 20)
+              span!= item.text
+

@@ -7,6 +7,16 @@
   background-position: center;
   background-size: cover;
 
+  @include vp-1023 {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;
@@ -15,6 +25,10 @@
 
     h2 {
       margin-bottom: 30px;
+
+      @include vp-1023 {
+        margin-bottom: 20px;
+      }
     }
 
     p {
@@ -22,6 +36,15 @@
       color: $color-silver-2;
       font-size: 18px;
       line-height: normal;
+      text-align: center;
+
+      @include vp-1023 {
+        font-size: 16px
+      }
+
+      @include vp-767 {
+        font-size: 13px;
+      }
     }
   }
 }

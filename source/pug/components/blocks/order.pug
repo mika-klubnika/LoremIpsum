@@ -27,36 +27,53 @@ mixin order()
     .container
       .order__text
         h2.title.title--h2 Оформление <span>Заказа</span>
-        p Перед заполнением формы ознакомьтесь с нашей схемой работы!
-      .order__description.description
-        ul.description__list
+        p Перед заполнением формы ознакомьтесь с нашей схемой работы!
+      .order__description.description.swiper
+        ul.description__list.swiper-wrapper
           each item in descriptionList
-            li.description__item
+            li.description__item.swiper-slide
               .description__icon
                 +icon(item.icon, 55, 55)
               p!= item.text
       form(action="", method="post").form
-        //- .form__wrapper
-        select(name="select")
-          option(selected, value="Выберите тип системы") Выберите тип системы
-          option(value="Sed ut perspiciatis") Sed ut perspiciatis
-          option(value="Nemo enim ipsam") Nemo enim ipsam
-          option(value="Et harum quidem") Et harum quidem
-          option(value="Temporibus autem") Temporibus autem
-          option(value="Itaque earum rerum") Itaque earum rerum
-        p
+        .form__select
+          button(type="button").form__select-btn
+            span Выберите тип системы
+            +icon("arrow", 20, 20)
+          ul.form__select-list
+            li
+              a(href="#") Sed ut perspiciatis
+            li
+              a(href="#") Nemo enim ipsam
+            li
+              a(href="#") Et harum quidem
+            li
+              a(href="#") Temporibus autem
+            li
+              a(href="#") Itaque earum rerum
+            li
+              a(href="#") Sed ut perspiciatis
+            li
+              a(href="#") Nemo enim ipsam
+            li
+              a(href="#") Et harum quidem
+            li
+              a(href="#") Temporibus autem
+            li
+              a(href="#") Itaque earum rerum
+        .form__email
           label(for="your-email").visually-hidden Ваш e-mail
-          input(type="email", name="email", id="your-email", placeholder="Ваш e-mail")
-        p
+          input(type="email", name="email", id="your-email", placeholder="Ваш e-mail" required)
+        .form__name
           label(for="your-name").visually-hidden Ваше имя
-          input(type="text", name="name", id="your-name", placeholder="Ваше имя")
-        //- .form__wrapper
-        p.form__range
-          label(for="range")
+          input(type="text", name="name", id="your-name", placeholder="Ваше имя" required)
+        .form__range
+          p
             span Sed ut perspiciatis, unde omnis iste natus
             span.form__range-value 75%
-          input(type="range", name="range", id="range", min="0", max="100", value="75", step="5")
-        p.form__file
+            input(type="text", name="range", value).form__range-input.visually-hidden
+          .form__range-slider
+        .form__file
           label(for="upload-file")
             +icon("file", 18, 20)
             span Прикрепить файл
